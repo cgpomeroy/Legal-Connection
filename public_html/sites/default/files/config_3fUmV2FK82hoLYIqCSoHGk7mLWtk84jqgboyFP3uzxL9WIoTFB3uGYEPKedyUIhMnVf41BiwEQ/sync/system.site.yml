@@ -1,0 +1,15 @@
+uuid: c5a070f0-631a-4d24-bfea-c2fc11675c24
+name: 'Legal Connection'
+mail: no-reply@legalconnection.co.za
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node/1
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: AyT9s8OUcclfALRE_imByOMgtZ19eOlqdF6zI3p7yqo
+mail_notification: ''

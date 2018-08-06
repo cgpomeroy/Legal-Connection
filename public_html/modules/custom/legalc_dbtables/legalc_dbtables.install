@@ -1,0 +1,356 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the legalc_dbtables module
+ */
+
+
+use Drupal\Core\Database\Database;
+
+
+/**
+ * Implements hook_schema().
+ *
+ * Defines the database tables used by this module.
+ *
+ * @see hook_schema()
+ *
+ * @ingroup dbtng_example
+ */
+function legalc_dbtables_schema() {
+
+  $schema['lc_matter_owner'] = array(
+
+    'description' => 'Manage lawyer ownership of matters.',
+
+    'fields' => array(
+      
+          'pid' => array(
+            'type' => 'serial',
+            'not null' => TRUE,
+            'description' => 'Primary Key: Unique entry ID.',
+          ),
+          'mid' => array(
+            'type' => 'int',
+            'unsigned' => TRUE,
+            'not null' => TRUE,
+            'default' => 0,
+            'description' => 'Matter node ID.',
+          ),
+          'cid' => array(
+            'type' => 'int',
+            'unsigned' => TRUE,
+            'not null' => TRUE,
+            'default' => 0,
+            'description' => 'Current owner user ID.',
+          ),
+          'uid' => array(
+            'type' => 'int',
+            'unsigned' => TRUE,
+            'not null' => TRUE,
+            'default' => 0,
+            'description' => 'New owner user ID.',
+          ),
+          'rid' => array(
+            'type' => 'int',
+            'unsigned' => TRUE,
+            'not null' => TRUE,
+            'default' => 0,
+            'description' => 'The node ID of the refer_matter type used to process the refer.',
+          ),
+          'origin' => array(
+            'type' => 'varchar',
+            'length' => 20,
+            'not null' => TRUE,
+            'default' => '',
+            'description' => 'Created matter or was referred to the matter.',
+          ),
+          'lc_status' => array(
+            'type' => 'varchar',
+            'length' => 20,
+            'not null' => TRUE,
+            'default' => '',
+            'description' => 'Referred lawyer refer status. start or created or accepted or declined.', 
+            //start = matter created, created = refer matter created, accepted = refer matter accepted, declined = refer matter declined,
+          ),
+          'created' => array(
+            'type' => 'int',
+            'not null' => TRUE,
+            'default' => 0,
+            'description' => 'Time at which the action was initiated.',
+          ),
+         
+    ),
+    'primary key' => array('pid'),
+    
+  );
+
+
+
+  $schema['lc_matter_lawyers'] = array(
+
+    'description' => 'Manage lawyers invited to a matter.',
+
+    'fields' => array(
+      
+          'pid' => array(
+            'type' => 'serial',
+            'not null' => TRUE,
+            'description' => 'Primary Key: Unique entry ID.',
+          ),
+          'mid' => array(
+            'type' => 'int',
+            'unsigned' => TRUE,
+            'not null' => TRUE,
+            'default' => 0,
+            'description' => 'Matter node ID.',
+          ),
+          'uid' => array(
+            'type' => 'int',
+            'unsigned' => TRUE,
+            'not null' => TRUE,
+            'default' => 0,
+            'description' => 'Lawyer invited uid',
+          ),
+          'iid' => array(
+            'type' => 'int',
+            'unsigned' => TRUE,
+            'not null' => TRUE,
+            'default' => 0,
+            'description' => 'The node ID of the invite_to_matter type used to process the invite.',
+          ),
+          'lc_status' => array(
+            'type' => 'varchar',
+            'length' => 20,
+            'not null' => TRUE,
+            'default' => '',
+            'description' => 'Invited lawyer invite status. created or accepted or declined.',
+          ),
+          'created' => array(
+            'type' => 'int',
+            'not null' => TRUE,
+            'default' => 0,
+            'description' => 'Time at which invite initiated changed.',
+          ),
+          'updated' => array(
+            'type' => 'int',
+            'not null' => TRUE,
+            'default' => 0,
+            'description' => 'Time at which invite accepted or declined.',
+          ),
+      
+    ),
+    'primary key' => array('pid'),
+    
+  );
+
+
+  $schema['lc_timeline'] = array(
+
+    'description' => 'Store description and time of every action that occurs on the site',
+
+    'fields' => array(
+      
+          'pid' => array(
+            'type' => 'serial',
+            'not null' => TRUE,
+            'description' => 'Primary Key: Unique entry ID.',
+          ),
+          'lc_desc' => array(
+            'type' => 'text',
+            'size' => 'normal',
+            'not null' => FALSE,
+            'description' => 'Description of the action that took place',
+          ),
+          'uid' => array(
+            'type' => 'int',
+            'unsigned' => TRUE,
+            'not null' => TRUE,
+            'default' => 0,
+            'description' => 'UID the action applies to',
+          ),
+          'mid' => array(
+            'type' => 'int',
+            'unsigned' => TRUE,
+            'not null' => TRUE,
+            'default' => 0,
+            'description' => 'Matter node ID.',
+          ),
+          'lc_data' => array(
+            'type' => 'text',
+            'size' => 'normal',
+            'not null' => FALSE,
+            'description' => 'Serialized variables that may be needed for display',
+          ),
+          'created' => array(
+            'type' => 'int',
+            'not null' => TRUE,
+            'default' => 0,
+            'description' => 'Time at which action took place.',
+          ),
+
+    ),
+    'primary key' => array('pid'),
+    
+  );
+  
+  
+  
+  
+  $schema['lc_notifications'] = array(
+
+    'description' => 'Store user notifications',
+
+    'fields' => array(
+      
+          'pid' => array(
+            'type' => 'serial',
+            'not null' => TRUE,
+            'description' => 'Primary Key: Unique entry ID.',
+          ),
+          'uid' => array(
+            'type' => 'int',
+            'unsigned' => TRUE,
+            'not null' => TRUE,
+            'default' => 0,
+            'description' => 'UID the notification applies to',
+          ),
+          'lc_message' => array(
+            'type' => 'text',
+            'size' => 'normal',
+            'not null' => FALSE,
+            'description' => 'The notification the user sees.',
+          ),
+          'lc_url' => array(
+            'type' => 'text',
+            'size' => 'normal',
+            'not null' => FALSE,
+            'description' => 'Internal or external url that goes along with the notification',
+          ),
+          'created' => array(
+            'type' => 'int',
+            'not null' => TRUE,
+            'default' => 0,
+            'description' => 'Time when the notification was created.',
+          ),
+    ),
+    'primary key' => array('pid'),
+    
+  );
+  
+  
+  
+  $schema['lc_chat_messages'] = array(
+
+    'description' => 'Store all chat messages',
+
+    'fields' => array(
+      
+          'pid' => array(
+            'type' => 'serial',
+            'not null' => TRUE,
+            'description' => 'Primary Key: Unique entry ID.',
+          ),
+          'mid' => array(
+            'type' => 'int',
+            'unsigned' => TRUE,
+            'not null' => TRUE,
+            'default' => 0,
+            'description' => 'MatterID that posted the chat',
+          ),
+          'uid' => array(
+            'type' => 'int',
+            'unsigned' => TRUE,
+            'not null' => TRUE,
+            'default' => 0,
+            'description' => 'UID that posted the chat',
+          ),
+          'chat_type' => array(
+            'type' => 'varchar',
+            'length' => 20,
+            'not null' => TRUE,
+            'default' => '',
+            'description' => 'message or file.',
+          ),
+          'lc_message' => array(
+            'type' => 'text',
+            'size' => 'medium',
+            'not null' => FALSE,
+            'description' => 'The chat message.',
+          ),
+          'lc_message_file' => array(
+            'type' => 'text',
+            'size' => 'medium',
+            'not null' => FALSE,
+            'description' => 'Either link to file or drupal file id??',
+          ),
+          'lc_data' => array(
+            'type' => 'text',
+            'size' => 'normal',
+            'not null' => FALSE,
+            'description' => 'Serialized variables that may be needed for processing',
+          ),
+          'created' => array(
+            'type' => 'int',
+            'not null' => TRUE,
+            'default' => 0,
+            'description' => 'Time when the message was sent.',
+          ),
+    ),
+    'primary key' => array('pid'),
+    
+  );
+  
+  
+  $schema['lc_matter_channel'] = array(
+
+    'description' => 'Store unique channel name for each matter',
+
+    'fields' => array(
+      
+          'pid' => array(
+            'type' => 'serial',
+            'not null' => TRUE,
+            'description' => 'Primary Key: Unique entry ID.',
+          ),
+          'mid' => array(
+            'type' => 'int',
+            'unsigned' => TRUE,
+            'not null' => TRUE,
+            'default' => 0,
+            'description' => 'NID of matter the channel applies to',
+          ),
+          'lc_channel' => array(
+            'type' => 'text',
+            'size' => 'small',
+            'not null' => FALSE,
+            'description' => 'Name of the channel used with ably.io',
+          ),
+          'lc_data' => array(
+            'type' => 'text',
+            'size' => 'normal',
+            'not null' => FALSE,
+            'description' => 'Serialized variables that may be needed for processing',
+          ),
+          'created' => array(
+            'type' => 'int',
+            'not null' => TRUE,
+            'default' => 0,
+            'description' => 'Time when the channel name was created.',
+          ),
+    ),
+    'primary key' => array('pid'),
+    
+  );
+  
+  
+  
+  
+  
+  
+  
+    
+
+  return $schema;
+}

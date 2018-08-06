@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies: {  }
+id: kint
+label: Kint
+weight: 6
+is_admin: null
+permissions:
+  - 'access devel information'
+  - 'access kint'

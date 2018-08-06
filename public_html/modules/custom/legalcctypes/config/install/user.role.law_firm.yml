@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies: {  }
+id: law_firm
+label: 'Law Firm'
+weight: 3
+is_admin: null
+permissions:
+  - 'access devel information'

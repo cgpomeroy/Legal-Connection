@@ -1,0 +1,19 @@
+global-styling:
+  css:
+    theme:
+      js/jquery.alertable/jquery.alertable.css: {}
+      js/rateyo/jquery.rateyo.min.css: {}
+      css/style.css: {}
+
+global-js:
+  js:
+    js/class.min.js: {}
+    js/queryStringToJSON.js: {}
+    js/jquery.alertable/jquery.alertable.min.js: {}
+    js/rateyo/jquery.rateyo.min.js: {}
+    js/custom.js: {}
+    js/custom-desktop.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal  
+    - core/drupalSettings

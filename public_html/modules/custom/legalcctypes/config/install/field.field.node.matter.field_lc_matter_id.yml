@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_lc_matter_id
+    - node.type.matter
+id: node.matter.field_lc_matter_id
+field_name: field_lc_matter_id
+entity_type: node
+bundle: matter
+label: 'Matter ID/Number'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

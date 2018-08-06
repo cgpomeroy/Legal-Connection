@@ -1,0 +1,47 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.billable_hours.field_description
+    - field.field.paragraph.billable_hours.field_hour_rate
+    - field.field.paragraph.billable_hours.field_hours
+    - field.field.paragraph.billable_hours.field_total
+    - paragraphs.paragraphs_type.billable_hours
+id: paragraph.billable_hours.default
+targetEntityType: paragraph
+bundle: billable_hours
+mode: default
+content:
+  field_description:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_hour_rate:
+    weight: 1
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_hours:
+    weight: 0
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_total:
+    weight: 3
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

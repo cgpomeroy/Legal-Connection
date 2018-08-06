@@ -1,0 +1,6 @@
+multiple_registration_path_law_firm: law-firm-registration
+multiple_registration_url_law_firm: /user/register/law_firm
+multiple_registration_path_law_firm_user: law-firm-user-registration
+multiple_registration_url_law_firm_user: /user/register/law_firm_user
+multiple_registration_path_client: client-registration
+multiple_registration_url_client: /user/register/client

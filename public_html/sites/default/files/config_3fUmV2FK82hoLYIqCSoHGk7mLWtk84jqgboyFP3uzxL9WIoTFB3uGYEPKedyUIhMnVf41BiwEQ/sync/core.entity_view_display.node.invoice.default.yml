@@ -1,0 +1,26 @@
+uuid: 0c82c063-c6e7-4c08-97d5-0cdb7089b5a7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.invoice.field_matter
+    - node.type.invoice
+  module:
+    - user
+id: node.invoice.default
+targetEntityType: node
+bundle: invoice
+mode: default
+content:
+  field_matter:
+    weight: 102
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden: {  }

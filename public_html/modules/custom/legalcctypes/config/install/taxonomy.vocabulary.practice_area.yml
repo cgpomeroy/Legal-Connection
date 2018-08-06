@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+name: 'Practice area'
+vid: practice_area
+description: ''
+hierarchy: 0
+weight: 0

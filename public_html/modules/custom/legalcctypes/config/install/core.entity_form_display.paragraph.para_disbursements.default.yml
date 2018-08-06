@@ -1,0 +1,47 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.para_disbursements.field_description
+    - field.field.paragraph.para_disbursements.field_hour_rate
+    - field.field.paragraph.para_disbursements.field_hours
+    - field.field.paragraph.para_disbursements.field_total
+    - paragraphs.paragraphs_type.para_disbursements
+id: paragraph.para_disbursements.default
+targetEntityType: paragraph
+bundle: para_disbursements
+mode: default
+content:
+  field_description:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_hour_rate:
+    weight: 1
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_hours:
+    weight: 0
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_total:
+    weight: 3
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

@@ -1,0 +1,21 @@
+uuid: a6ca057a-77d1-4b42-b27b-20ec739d1664
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_open_date
+    - node.type.matter
+  module:
+    - datetime
+id: node.matter.field_open_date
+field_name: field_open_date
+entity_type: node
+bundle: matter
+label: 'Open Date'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

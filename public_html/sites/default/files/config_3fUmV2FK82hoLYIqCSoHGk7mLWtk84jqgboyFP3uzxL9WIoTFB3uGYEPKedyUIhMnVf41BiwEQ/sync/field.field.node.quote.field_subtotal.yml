@@ -1,0 +1,23 @@
+uuid: faba3b39-3a3e-4f12-9790-19c1fe8189cc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_subtotal
+    - node.type.quote
+id: node.quote.field_subtotal
+field_name: field_subtotal
+entity_type: node
+bundle: quote
+label: Subtotal
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: !!float -3
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: float

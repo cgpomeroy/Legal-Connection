@@ -1,0 +1,21 @@
+uuid: e397e242-0392-48de-b9f6-b05e47338bcf
+langcode: en
+status: true
+dependencies: {  }
+id: law_firm_user
+label: 'Law Firm user'
+weight: 4
+is_admin: null
+permissions:
+  - 'create matter content'
+  - 'create paragraph content billable_hours'
+  - 'create paragraph content para_disbursements'
+  - 'create quote content'
+  - 'delete paragraph content billable_hours'
+  - 'delete paragraph content para_disbursements'
+  - 'edit own matter content'
+  - 'edit own quote content'
+  - 'update paragraph content billable_hours'
+  - 'update paragraph content para_disbursements'
+  - 'view paragraph content billable_hours'
+  - 'view paragraph content para_disbursements'

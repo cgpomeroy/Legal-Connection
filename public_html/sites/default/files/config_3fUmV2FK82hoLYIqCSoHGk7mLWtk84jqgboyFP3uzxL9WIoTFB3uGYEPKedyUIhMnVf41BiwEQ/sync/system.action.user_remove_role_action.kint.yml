@@ -1,0 +1,14 @@
+uuid: f8054415-a4cb-4f02-9380-b66c3b716343
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.kint
+  module:
+    - user
+id: user_remove_role_action.kint
+label: 'Remove the Kint role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: kint

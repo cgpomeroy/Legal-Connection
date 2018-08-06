@@ -1,0 +1,10 @@
+uuid: 042f17fe-6477-47c9-8e85-99539b9069b6
+langcode: en
+status: true
+dependencies: {  }
+id: law_firm
+label: 'Law Firm'
+weight: 3
+is_admin: null
+permissions:
+  - 'access devel information'

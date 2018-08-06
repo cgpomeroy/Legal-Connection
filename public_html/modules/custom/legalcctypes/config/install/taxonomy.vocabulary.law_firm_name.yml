@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+name: 'Law firm name'
+vid: law_firm_name
+description: ''
+hierarchy: 0
+weight: 0

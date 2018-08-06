@@ -1,0 +1,9 @@
+uuid: 41abd5ef-9e08-4e3a-92e9-68b438949b89
+langcode: en
+status: true
+dependencies: {  }
+id: billable_hours
+label: 'Billable Hours'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

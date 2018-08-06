@@ -1,0 +1,30 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_para_bh
+    - node.type.quote
+    - paragraphs.paragraphs_type.billable_hours
+  module:
+    - entity_reference_revisions
+id: node.quote.field_para_bh
+field_name: field_para_bh
+entity_type: node
+bundle: quote
+label: 'Billable Hours'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      billable_hours: billable_hours
+    target_bundles_drag_drop:
+      billable_hours:
+        enabled: true
+        weight: 2
+field_type: entity_reference_revisions

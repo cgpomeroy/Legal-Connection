@@ -1,0 +1,17 @@
+uuid: c58a7b98-6f40-4bab-9e07-4d8a4aa61c2f
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Matter
+type: matter
+description: ''
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

@@ -1,0 +1,23 @@
+uuid: da248f53-bd33-479e-9b00-19644fcda681
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_send_to_client
+    - node.type.quote
+id: node.quote.field_send_to_client
+field_name: field_send_to_client
+entity_type: node
+bundle: quote
+label: 'Send to client'
+description: 'Check this box when you are ready for the client to receive the quote.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

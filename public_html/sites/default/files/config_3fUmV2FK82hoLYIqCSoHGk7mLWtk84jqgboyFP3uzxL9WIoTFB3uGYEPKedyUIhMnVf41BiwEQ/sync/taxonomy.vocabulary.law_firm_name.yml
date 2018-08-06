@@ -1,0 +1,9 @@
+uuid: c5aa3a9b-5b0c-4f42-8c4a-a97ec2692e63
+langcode: en
+status: true
+dependencies: {  }
+name: 'Law firm name'
+vid: law_firm_name
+description: ''
+hierarchy: 0
+weight: 0

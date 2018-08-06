@@ -1,0 +1,14 @@
+uuid: 56ad3bcb-3fba-4a6b-8fcd-50719c31c737
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.kint
+  module:
+    - user
+id: user_add_role_action.kint
+label: 'Add the Kint role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: kint

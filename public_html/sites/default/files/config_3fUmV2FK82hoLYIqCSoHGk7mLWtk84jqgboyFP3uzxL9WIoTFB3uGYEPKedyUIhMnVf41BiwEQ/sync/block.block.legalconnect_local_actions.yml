@@ -1,0 +1,20 @@
+uuid: 28dbe082-7dbf-492c-99f2-35707839b1a3
+langcode: en
+status: true
+dependencies:
+  theme:
+    - legalconnect
+_core:
+  default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
+id: legalconnect_local_actions
+theme: legalconnect
+region: content
+weight: -7
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

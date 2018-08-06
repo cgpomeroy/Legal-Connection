@@ -1,0 +1,23 @@
+uuid: 4565c507-3ee8-4fa1-8ce0-bf26ccecaaa1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_mandatory_amount
+    - node.type.quote
+id: node.quote.field_mandatory_amount
+field_name: field_mandatory_amount
+entity_type: node
+bundle: quote
+label: 'Mandatory Amount'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: !!float 0
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: float

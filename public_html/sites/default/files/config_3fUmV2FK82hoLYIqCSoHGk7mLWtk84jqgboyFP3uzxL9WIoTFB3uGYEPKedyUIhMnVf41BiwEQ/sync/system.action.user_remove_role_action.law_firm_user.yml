@@ -1,0 +1,14 @@
+uuid: 87af0cb9-cc5c-43a4-9d1b-7018e1986c80
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.law_firm_user
+  module:
+    - user
+id: user_remove_role_action.law_firm_user
+label: 'Remove the Law Firm User role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: law_firm_user

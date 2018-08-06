@@ -1,0 +1,14 @@
+uuid: 83a254ff-0e07-4ed3-b6ab-2126fe3d07e1
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.law_firm
+  module:
+    - user
+id: user_add_role_action.law_firm
+label: 'Add the Law Firm role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: law_firm

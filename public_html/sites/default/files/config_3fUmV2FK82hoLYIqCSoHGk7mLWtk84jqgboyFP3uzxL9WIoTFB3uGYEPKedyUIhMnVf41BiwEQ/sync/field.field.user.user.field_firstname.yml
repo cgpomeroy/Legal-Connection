@@ -1,0 +1,29 @@
+uuid: 7c57ab31-d769-4866-935c-972cb5f3edd4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_firstname
+  module:
+    - multiple_registration
+    - user
+third_party_settings:
+  multiple_registration:
+    user_additional_register_form:
+      law_firm_user: law_firm_user
+      customer: customer
+      client: client
+      100: 0
+      law_firm: 0
+id: user.user.field_firstname
+field_name: field_firstname
+entity_type: user
+bundle: user
+label: 'First name'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

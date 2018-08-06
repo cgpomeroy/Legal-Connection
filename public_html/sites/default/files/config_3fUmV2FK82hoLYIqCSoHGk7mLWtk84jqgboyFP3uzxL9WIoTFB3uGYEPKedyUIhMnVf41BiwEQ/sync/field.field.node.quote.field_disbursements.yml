@@ -1,0 +1,34 @@
+uuid: da2f2a0d-1db6-49ed-be08-98ad11f046ae
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_disbursements
+    - node.type.quote
+    - paragraphs.paragraphs_type.para_disbursements
+  module:
+    - entity_reference_revisions
+id: node.quote.field_disbursements
+field_name: field_disbursements
+entity_type: node
+bundle: quote
+label: Disbursements
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      para_disbursements: para_disbursements
+    target_bundles_drag_drop:
+      billable_hours:
+        weight: 2
+        enabled: false
+      para_disbursements:
+        enabled: true
+        weight: 3
+field_type: entity_reference_revisions

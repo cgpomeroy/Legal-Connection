@@ -1,0 +1,23 @@
+uuid: bad31e95-9040-4e5e-a554-2c1076e0b1c8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_total
+    - paragraphs.paragraphs_type.billable_hours
+id: paragraph.billable_hours.field_total
+field_name: field_total
+entity_type: paragraph
+bundle: billable_hours
+label: Total
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: !!float 0
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: float

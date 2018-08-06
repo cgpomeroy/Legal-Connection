@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_close_date
+    - node.type.matter
+  module:
+    - datetime
+id: node.matter.field_close_date
+field_name: field_close_date
+entity_type: node
+bundle: matter
+label: 'Close Date'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

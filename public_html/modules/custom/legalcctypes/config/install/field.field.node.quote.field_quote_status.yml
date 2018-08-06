@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_quote_status
+    - node.type.quote
+  module:
+    - options
+id: node.quote.field_quote_status
+field_name: field_quote_status
+entity_type: node
+bundle: quote
+label: 'Quote status'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

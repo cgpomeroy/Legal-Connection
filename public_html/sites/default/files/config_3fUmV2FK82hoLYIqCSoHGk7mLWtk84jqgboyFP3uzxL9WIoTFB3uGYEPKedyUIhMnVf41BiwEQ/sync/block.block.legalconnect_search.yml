@@ -1,0 +1,22 @@
+uuid: f6ea0502-192c-4199-9d3b-3d3409aee47f
+langcode: en
+status: false
+dependencies:
+  module:
+    - search
+  theme:
+    - legalconnect
+_core:
+  default_config_hash: za-39d5WDUg6XvbyqSnuVYEeq6QM4qKJxW8MnoAha5A
+id: legalconnect_search
+theme: legalconnect
+region: sidebar_first
+weight: -1
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: Search
+  provider: search
+  label_display: visible
+visibility: {  }

@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_hour_rate
+    - paragraphs.paragraphs_type.billable_hours
+id: paragraph.billable_hours.field_hour_rate
+field_name: field_hour_rate
+entity_type: paragraph
+bundle: billable_hours
+label: 'Hour Rate'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: !!float 0
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: float

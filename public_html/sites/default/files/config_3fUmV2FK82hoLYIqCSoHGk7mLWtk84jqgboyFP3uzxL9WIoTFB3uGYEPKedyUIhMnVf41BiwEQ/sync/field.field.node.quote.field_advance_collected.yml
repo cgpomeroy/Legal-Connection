@@ -1,0 +1,23 @@
+uuid: 6c68427e-153c-46ff-b510-a11636ca9c33
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_advance_collected
+    - node.type.quote
+id: node.quote.field_advance_collected
+field_name: field_advance_collected
+entity_type: node
+bundle: quote
+label: 'Advance Collected'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

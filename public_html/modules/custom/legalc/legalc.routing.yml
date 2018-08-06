@@ -1,0 +1,303 @@
+legalc.dashboard:
+  path: '/dashboard'
+  defaults:
+    _controller: '\Drupal\legalc\Controller\DashboardController::dashboard'
+    _title: 'Dashboard'
+  requirements:
+    _permission: 'access content'
+    
+legalc.dashboard.matter:
+  path: '/dashboard/matter/{nid}'
+  defaults:
+    _controller: '\Drupal\legalc\Controller\DashboardController::dashboardMatter'
+    _title: 'Dashboard'
+  requirements:
+    _permission: 'access content'
+    
+legalc.matters:
+  path: '/matters'
+  defaults:
+    _controller: '\Drupal\legalc\Controller\MattersController::matters'
+    _title: 'Matters'
+  requirements:
+    _permission: 'access content'
+        
+legalc.matters.all:
+  path: '/matters/all'
+  defaults:
+    _controller: '\Drupal\legalc\Controller\MattersController::allMatters'
+    _title: 'All Matters'
+  requirements:
+    _permission: 'access content'
+    
+legalc.matters.referred:
+  path: '/matters/referrals'
+  defaults:
+    _controller: '\Drupal\legalc\Controller\MattersController::referralMatters'
+    _title: 'Referred Matters'
+  requirements:
+    _permission: 'access content'
+    
+legalc.matters.starred:
+  path: '/matters/starred'
+  defaults:
+    _controller: '\Drupal\legalc\Controller\MattersController::starredMatters'
+    _title: 'Starred Matters'
+  requirements:
+    _permission: 'access content'
+    
+legalc.matters.archived:
+  path: '/matters/archived'
+  defaults:
+    _controller: '\Drupal\legalc\Controller\MattersController::archivedMatters'
+    _title: 'Archived Matters'
+  requirements:
+    _permission: 'access content'
+    
+legalc.matter:
+  path: '/matter/{nid}'
+  defaults:
+    _controller: '\Drupal\legalc\Controller\MatterController::matter'
+    _title: 'Matter'
+  requirements:
+    _permission: 'access content'
+    
+legalc.matter.desktop:
+  path: '/matter-desktop/{nid}'
+  defaults:
+    _controller: '\Drupal\legalc\Controller\MatterController::matterDesktop'
+    _title: 'Matter Desktop'
+  requirements:
+    _permission: 'access content'
+    
+legalc.matter.invoices:
+  path: '/matter/invoices/{nid}'
+  defaults:
+    _controller: '\Drupal\legalc\Controller\MatterController::invoices'
+    _title: 'Matter Invoices'
+  requirements:
+    _permission: 'access content'
+    
+legalc.matter.quotes:
+  path: '/matter/quotes/{nid}'
+  defaults:
+    _controller: '\Drupal\legalc\Controller\MatterController::quotes'
+    _title: 'Matter Quotes'
+  requirements:
+    _permission: 'access content'
+    
+legalc.matter.documents:
+  path: '/matter/documents/{nid}'
+  defaults:
+    _controller: '\Drupal\legalc\Controller\MatterController::documents'
+    _title: 'Matter Documents'
+  requirements:
+    _permission: 'access content'
+    
+legalc.matter.payments:
+  path: '/matter/payments/{nid}'
+  defaults:
+    _controller: '\Drupal\legalc\Controller\MatterController::payments'
+    _title: 'Matter Payments'
+  requirements:
+    _permission: 'access content'
+    
+legalc.matter.billing:
+  path: '/matter/billing/{nid}'
+  defaults:
+    _controller: '\Drupal\legalc\Controller\MatterController::billing'
+    _title: 'Matter Billing'
+  requirements:
+    _permission: 'access content'
+    
+legalc.matter.account:
+  path: '/matter/account/{nid}'
+  defaults:
+    _controller: '\Drupal\legalc\Controller\MatterController::account'
+    _title: 'Matter Account'
+  requirements:
+    _permission: 'access content'
+    
+legalc.matter.activity:
+  path: '/matter/activity/{nid}'
+  defaults:
+    _controller: '\Drupal\legalc\Controller\MatterController::activity'
+    _title: 'Matter Activity'
+  requirements:
+    _permission: 'access content'
+    
+legalc.chat:
+  path: '/chat'
+  defaults:
+    _controller: '\Drupal\legalc\Controller\ChatController::chat'
+    _title: 'Chat'
+  requirements:
+    _permission: 'access content'
+    
+legalc.chat.message:
+  path: '/chat/message'
+  defaults:
+    _controller: '\Drupal\legalc\Controller\ChatController::message'
+    _title: 'Send chat message'
+  requirements:
+    _permission: 'access content'
+    
+legalc.chat.archive:
+  path: '/chat/archive'
+  defaults:
+    _controller: '\Drupal\legalc\Controller\ChatController::archive'
+    _title: 'Fetch previous messages in chat'
+  requirements:
+    _permission: 'access content'
+    
+legalc.quote:
+  path: '/quote/{nid}'
+  defaults:
+    _controller: '\Drupal\legalc\Controller\QuoteController::quote'
+    _title: 'Quote'
+  requirements:
+    _permission: 'access content'
+    
+legalc.quote.advance-collected:
+  path: '/quote/advance-collected/{nid}'
+  defaults:
+    _controller: '\Drupal\legalc\Controller\QuoteController::advanceCollected'
+    _title: 'Quote advance collected'
+  requirements:
+    _permission: 'access content'
+    
+legalc.quote.send-to-client:
+  path: '/quote/send-to-client/{nid}'
+  defaults:
+    _controller: '\Drupal\legalc\Controller\QuoteController::sendToClient'
+    _title: 'Send quote to client'
+  requirements:
+    _permission: 'access content'
+    
+legalc.quote.invoice:
+  path: '/quote/invoice/{nid}'
+  defaults:
+    _controller: '\Drupal\legalc\Controller\QuoteController::invoice'
+    _title: 'Quote invoice client'
+  requirements:
+    _permission: 'access content'
+    
+legalc.quote.paid:
+  path: '/quote/paid/{nid}'
+  defaults:
+    _controller: '\Drupal\legalc\Controller\QuoteController::paid'
+    _title: 'Mark quote paid'
+  requirements:
+    _permission: 'access content'
+    
+legalc.quote.client-confirmed:
+  path: '/quote/client-confirmed/{nid}'
+  defaults:
+    _controller: '\Drupal\legalc\Controller\QuoteController::clientConfirmed'
+    _title: 'Client accepts the quote'
+  requirements:
+    _permission: 'access content'
+    
+legalc.matter.invoice-client:
+  path: '/matter/invoice-client/{nid}'
+  defaults:
+    _controller: '\Drupal\legalc\Controller\MatterController::invoiceClient'
+    _title: 'Invoice client'
+  requirements:
+    _permission: 'access content'
+    
+legalc.lawyer.profile:
+  path: '/lawyer/profile/{uid}'
+  defaults:
+    _controller: '\Drupal\legalc\Controller\LawyerController::profile'
+    _title: 'Lawyer Profile'
+  requirements:
+    _permission: 'access content'
+    
+legalc.lawyer.work-details:
+  path: '/lawyer/profile/word-details/{uid}'
+  defaults:
+    _controller: '\Drupal\legalc\Controller\LawyerController::workDetails'
+    _title: 'Lawyer Profile Work Details'
+  requirements:
+    _permission: 'access content'
+    
+legalc.lawyer.circulars:
+  path: '/lawyer/profile/circulars/{uid}'
+  defaults:
+    _controller: '\Drupal\legalc\Controller\LawyerController::circulars'
+    _title: 'Lawyer Profile Circulars'
+  requirements:
+    _permission: 'access content'
+    
+legalc.lawyer.reviews:
+  path: '/lawyer/profile/reviews/{uid}'
+  defaults:
+    _controller: '\Drupal\legalc\Controller\LawyerController::reviews'
+    _title: 'Lawyer Profile Reviews'
+  requirements:
+    _permission: 'access content'
+
+legalc.lawyer.faqs:
+  path: '/lawyer/profile/faqs/{uid}'
+  defaults:
+    _controller: '\Drupal\legalc\Controller\LawyerController::faqs'
+    _title: 'Lawyer Profile Faqs'
+  requirements:
+    _permission: 'access content'
+    
+legalc.lawyer.news-feed:
+  path: '/lawyer/profile/news-feed/{uid}'
+  defaults:
+    _controller: '\Drupal\legalc\Controller\LawyerController::newsFeed'
+    _title: 'Lawyer Profile News Feed'
+  requirements:
+    _permission: 'access content'
+    
+legalc.invoice:
+  path: '/invoice/{nid}'
+  defaults:
+    _controller: '\Drupal\legalc\Controller\InvoiceController::invoiceDisplay'
+    _title: 'Quote invoice display'
+  requirements:
+    _permission: 'access content'
+    
+legalc.payment:
+  path: '/payment/{nid}'
+  defaults:
+    _controller: '\Drupal\legalc\Controller\PaymentController::paymentDisplay'
+    _title: 'Quote payment display'
+  requirements:
+    _permission: 'access content'
+    
+legalc.lawyers.list-lawyers:
+  path: '/lawyers/list/{nid}/{action}'
+  defaults:
+    _controller: '\Drupal\legalc\Controller\LawyersController::listLawyers'
+    _title: 'Refer matter to new lawyer'
+  requirements:
+    _permission: 'access content'
+    
+legalc.lawyers.list-all:
+  path: '/lawyers/all/{nid}/{action}'
+  defaults:
+    _controller: '\Drupal\legalc\Controller\LawyersController::listAll'
+    _title: 'List all lawyer available for referring'
+  requirements:
+    _permission: 'access content'
+    
+legalc.lawyers.list-network:
+  path: '/lawyers/network/{nid}/{action}'
+  defaults:
+    _controller: '\Drupal\legalc\Controller\LawyersController::listNetwork'
+    _title: 'List all lawyers in my network'
+  requirements:
+    _permission: 'access content'
+    
+legalc.matter.refer-to-lawyer:
+  path: '/matter/refer-to-lawyer/{mid}/{uid}'
+  defaults:
+    _controller: '\Drupal\legalc\Controller\MatterController::referToLawyer'
+    _title: 'Refer matter to lawyer'
+  requirements:
+    _permission: 'access content'

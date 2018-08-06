@@ -1,0 +1,22 @@
+uuid: 2afc8b33-425b-4f7f-a33b-af8b878395ae
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - legalconnect
+_core:
+  default_config_hash: jQQUUWN2Uxr5qZtc9zcJKBCxpKY8orN1u2HPqYYRQDI
+id: legalconnect_powered
+theme: legalconnect
+region: navigation
+weight: -7
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  provider: system
+  label_display: '0'
+visibility: {  }

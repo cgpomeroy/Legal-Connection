@@ -1,0 +1,11 @@
+uuid: 8e08a27e-8480-4055-8ce9-295e1ee0e656
+langcode: en
+status: true
+dependencies: {  }
+id: kint
+label: Kint
+weight: 6
+is_admin: null
+permissions:
+  - 'access devel information'
+  - 'access kint'

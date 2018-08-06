@@ -1,0 +1,10 @@
+name: LegalC
+type: module
+description: Customizations to the Legal Connection site.
+package: Custom
+
+dependencies:
+  - block
+
+type: module
+core: 8.x

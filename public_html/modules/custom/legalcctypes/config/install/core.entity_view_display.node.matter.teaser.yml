@@ -1,0 +1,29 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.matter.field_client_email
+    - field.field.node.matter.field_client_name
+    - field.field.node.matter.field_client_phone
+    - field.field.node.matter.field_description
+    - field.field.node.matter.field_lc_matter_id
+    - field.field.node.matter.field_practice_area
+    - node.type.matter
+  module:
+    - user
+id: node.matter.teaser
+targetEntityType: node
+bundle: matter
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_client_email: true
+  field_client_name: true
+  field_client_phone: true
+  field_description: true
+  field_lc_matter_id: true
+  field_practice_area: true

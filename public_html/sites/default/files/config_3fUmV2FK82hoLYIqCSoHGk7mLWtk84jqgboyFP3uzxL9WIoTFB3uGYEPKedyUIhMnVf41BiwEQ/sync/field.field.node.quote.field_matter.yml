@@ -1,0 +1,28 @@
+uuid: 98c1be1f-8a5d-4c18-b120-19d25cf47c2a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_matter
+    - node.type.matter
+    - node.type.quote
+id: node.quote.field_matter
+field_name: field_matter
+entity_type: node
+bundle: quote
+label: Matter
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      matter: matter
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
