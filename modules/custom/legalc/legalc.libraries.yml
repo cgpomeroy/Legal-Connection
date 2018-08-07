@@ -1,0 +1,11 @@
+legalc-default:
+  js:
+    js/legalconnections.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupalSettings
+    
+legalc-chat:
+  js:
+    //cdn.ably.io/lib/ably.min-1.js: {type: external}
+    js/legalc-chat.js: {}

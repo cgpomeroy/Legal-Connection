@@ -1,0 +1,55 @@
+<div class="lc-lp-work-details-wrap">
+    
+    <div class="lc-lp-page-section">
+        <h4 class="lc-lp-page-section-title">About</h4>
+        <div>{{data.about|raw}}</div>
+    </div>
+    
+    <div class="lc-lp-page-section">
+        <h4 class="lc-lp-page-section-title">Industry</h4>
+        <div>
+            
+            {% for item in data.industry %}
+                {{item.rendered|raw}}
+            {% endfor %}
+            
+        </div>
+    </div>
+    
+    <div class="lc-lp-page-section">
+        <h4 class="lc-lp-page-section-title">Expertise</h4>
+        <div>
+            {% for item in data.expertise %}
+                {{item.rendered|raw}}
+            {% endfor %}
+        </div>
+    </div>
+    
+    <div class="lc-lp-page-section">
+        <h4 class="lc-lp-page-section-title">Education</h4>
+        <div>{{data.education|raw}}</div>
+    </div>
+    
+    <div class="lc-lp-page-section">
+        <h4 class="lc-lp-page-section-title">Location</h4>
+        <div class="lc-lp-wd-loc">
+            
+            <div class="lc-lp-wd-loc-left">
+                {{data.location.hours|raw}}
+                {{data.location.address|raw}}
+            </div>
+            <div class="lc-lp-wd-loc-right">
+                {{data.location.map|raw}}
+            </div>
+            
+        </div>
+    </div>
+    
+    <div class="lc-lp-page-section">
+        <h4 class="lc-lp-page-section-title">Customer Obligation</h4>
+        <div>
+            {{data.obligation|raw}}
+        </div>
+    </div>
+    
+</div>

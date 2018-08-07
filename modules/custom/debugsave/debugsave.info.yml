@@ -1,0 +1,11 @@
+name: Debug Save
+type: module
+description: Save debug object for display on custom page.
+package: Custom
+
+dependencies:
+  - devel
+  - kint
+
+type: module
+core: 8.x

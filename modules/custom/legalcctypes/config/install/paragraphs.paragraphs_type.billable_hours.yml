@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+id: billable_hours
+label: 'Billable Hours'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

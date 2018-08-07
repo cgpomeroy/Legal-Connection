@@ -1,7 +1,0 @@
-debugsave.show:
-  path: '/show-debug-save'
-  defaults:
-    _controller: '\Drupal\debugsave\Controller\DebugSaveController::show'
-    _title: 'Show Debug Save'
-  requirements:
-    _permission: 'access content'

@@ -1,0 +1,7 @@
+name: LegalC DBTables
+type: module
+description: Add new database tables for the legalc module.
+package: Custom
+
+type: module
+core: 8.x
